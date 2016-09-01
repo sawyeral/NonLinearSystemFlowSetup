@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Video view for Video Prompt -->
+    <VideoView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="115dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/scanitem_video" />
+
+    <!-- Test to indicate this is Scan Item Video Prompt - for development and testing use only -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Scan Item - Video Prompt"/>
+
+    <!-- Button to indicate no action - Replay prompt, or Redirect to Call for Help -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="No Action/\nToo Few"
+        android:textSize="12dp"
+        android:id="@+id/button_scanitemvideo_noaction_callforhelp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="8dp" />
+
+    <!-- Button to indicate Too Many Items Scanned - Replay prompt, or Redirect to Call for Help -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="Too Many"
+        android:id="@+id/button_scanitemvideo_toomany_callforhelp"
+        android:layout_above="@id/button_scanitemvideo_noaction_callforhelp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="8dp" />
+
+    <!-- Button to indicate Wrong Item Scanned - Replay prompt, or Redirect to Call for Help -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="Wrong Item"
+        android:id="@+id/button_scanitemvideo_wrongitem_callforhelp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="8dp" />
+
+    <!-- Button to indicate Correct action - Redirect to Nav to Item, or Redirect to Nav to Ship -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="Correct Number"
+        android:id="@+id/button_scanitemvideo_correctnumber_navtoship"
+        android:layout_above="@id/button_scanitemvideo_wrongitem_callforhelp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp" />
+
+    <!-- Button to Call for Help - Redirect to Call for Help -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="Help"
+        android:id="@+id/button_scanitemvideo_callforhelp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="8dp" />
+
+</RelativeLayout>

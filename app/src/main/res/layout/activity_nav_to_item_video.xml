@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.nonlinearsystemflowsetup.NavToItemVideo">
+
+    <!-- Video View for Video Prompt -->
+    <VideoView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/navtoitemvideo_video" />
+
+    <!-- Text to indicate this is Navigate to Item Video Prompt - for creating and testing use only -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:text="Navigate To Item - Video Prompt"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"/>
+
+    <!-- Text to indicate Item Number - for development and testing use only -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:text="Item Number Here"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:id="@+id/navtoitemvideo_itemnumberdisplay"/>
+
+    <!-- Button to indicate user did not arrive - Replay prompt, or Redirect to Call for Help -->
+    <!-- android:onClick="navToItemVideoPrompt" -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="No Arrival"
+        android:id="@+id/button_navtoitemvideo_noarrival_callforhelp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp"
+        />
+
+    <!-- Button for Call for Help - Redirect to Call for Help -->
+    <!-- android:onClick="navToItemVideoToCallForHelp" -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="Help"
+        android:id="@+id/button_navtoitemvideo_callforhelp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="48dp"
+        />
+
+    <!-- Button to indicate user has navigated to item - Redirect to Scan Shelf -->
+    <!-- android:onClick="navToItemVideoToScanShelf" -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="Arrival"
+        android:id="@+id/button_navtoitemvideo_scanshelf"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="48dp"
+        />
+
+</RelativeLayout>

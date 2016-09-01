@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.nonlinearsystemflowsetup.ScanItemShip">
+
+    <!-- Image view for Photo Prompt -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/scanitemship_photo2"
+        android:layout_marginBottom="48dp"
+        />
+
+    <!-- Text to indicate that is the Scan Item Ship Photo Prompt - for development and testing use only -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:text="Scan Items in Shipping Area - Photo Prompt"
+        android:fontFamily="sans-serif-light"
+        android:textSize="16dp"
+        android:layout_centerHorizontal="true"/>
+
+    <!-- Button to indicate no action - Replay prompt, or Redirect to Video Prompt -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="No Action"
+        android:id="@+id/button_scanitemshipphoto_noarrival_scantoshipvideo"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:padding="16dp"
+        android:onClick="scanItemShipPhotoNoArrival"/>
+
+    <!-- Button to indicate correct items scanned - Redirect to Main Menu -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="Correct"
+        android:id="@+id/button_scanitemshipphoto_arrival_main"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_centerHorizontal="true"
+        android:padding="16dp" />
+
+    <!-- Button to Call for Help - Redirect to Call for Help -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="Help"
+        android:id="@+id/button_scanitemshipphoto_callforhelp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:padding="16dp" />
+
+</RelativeLayout>
+

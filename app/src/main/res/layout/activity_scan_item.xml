@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Image view for Photo Prompt -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/scan_item_photo2"
+        android:layout_marginBottom="115dp"
+        />
+
+    <!-- Text view to indicate this is Scan Item Photo Prompt - for creation and testing only -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Scan Item - Photo Prompt"/>
+
+    <!-- Text view to indicate item number - for creation and testing use only -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="Item Number Here"
+        android:id="@+id/scanitemphoto_displayitemnumber"/>
+
+    <!-- Button to indicate no action - Replay prompt, or Redirect to Video Prompt -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="No Action/\nToo Few"
+        android:textSize="12dp"
+        android:id="@+id/button_scanitemphoto_noaction_scanitemvideo"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="8dp" />
+
+    <!-- Button to indicate too many item have been scanned - Replay prompt, or Redirect to Video Prompt -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="Too Many"
+        android:id="@+id/button_scanitemphoto_toomany_scanitemvideo"
+        android:layout_above="@id/button_scanitemphoto_noaction_scanitemvideo"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="8dp" />
+
+    <!-- Button to indicate wrong item scanned - Replay Prompt, or Redirect to Video Prompt -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="Wrong Item"
+        android:id="@+id/button_scanitemphoto_wrongitem_scanitemvideo"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="8dp" />
+
+    <!-- Button to indicate correct number scanned - Redirect to Nav to Item, or Nav to Ship -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="Correct Number"
+        android:id="@+id/button_scanitemphoto_correctnumber_navtoship"
+        android:layout_above="@id/button_scanitemphoto_wrongitem_scanitemvideo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        />
+
+    <!-- Button to Call for Help - Redirect to Call for Help -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="Help"
+        android:id="@+id/button_scanitemphoto_callforhelp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="8dp"
+        />
+
+</RelativeLayout>

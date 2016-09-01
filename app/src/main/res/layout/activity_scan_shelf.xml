@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Image View for Photo Prompt -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/scan_item_photo2"
+        android:layout_marginBottom="115dp"
+        />
+
+    <!-- Text View to indicate this is Scan Shelf Photo Prompt - for use in development and testing only -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scan Shelf - Photo Prompt"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"/>
+
+    <!-- Text View to indicate item number - for use in development and testing only -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="Item Number Here"
+        android:id="@+id/scanshelfphoto_displayitemnumber"/>
+
+    <!-- Button to indicate No Action - Replay prompt, or Redirect to Video Prompt -->
+    <!-- android:onClick="shelfScanNoAction" -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="No Action"
+        android:textSize="12dp"
+        android:id="@+id/button_scanshelfphoto_noaction_scanitemvideo"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="8dp"
+        />
+
+    <!-- Button to indicate Wrong Item scanned - Replay prompt, or Redirect to Video Prompt -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="Wrong Item"
+        android:id="@+id/button_scanshelfphoto_wrongitem_scanshelfvideo"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="8dp"
+        android:onClick="shelfScanWrongItem"/>
+
+    <!-- Button to indicate Correct action - Redirect to Scan Item -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="Correct Item"
+        android:id="@+id/button_scanshelfphoto_correctitem_scanitem"
+        android:layout_above="@id/button_scanshelfphoto_wrongitem_scanshelfvideo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        />
+
+    <!-- Button to Call for Help - Redirect to Call for Help -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="Help"
+        android:id="@+id/button_scanshelfphoto_callforhelp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="8dp"
+        />
+
+</RelativeLayout>

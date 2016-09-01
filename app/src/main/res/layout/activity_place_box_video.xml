@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Video View for Video Prompt -->
+    <VideoView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="115dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/placebox_video" />
+
+    <!-- Text to indicate this is Place Box Video Prompt -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Place Box - Video Prompt"/>
+
+    <!-- Button to indicate no action - Replay prompt, or Redirect to Call for Help -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="No Action/\nToo Few"
+        android:textSize="12dp"
+        android:id="@+id/button_placeboxvideo_noaction_callforhelp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="8dp"
+        android:onClick="placeBoxVideoNoAction"/>
+
+    <!-- Button to indicate too many items placed - Replay prompt, or Redirect to Call for Help-->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="Too Many"
+        android:id="@+id/button_placeboxvideo_toomany_callforhelp"
+        android:layout_above="@id/button_placeboxvideo_noaction_callforhelp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="8dp"
+        android:onClick="placeBoxVideoTooMany"/>
+
+    <!-- Button to indicate wrong item has been placed - Replay prompt, or Redirect to Call for Help -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="Wrong Item"
+        android:id="@+id/button_placeboxvideo_wrongitem_callforhelp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="8dp"
+        android:onClick="placeBoxVideoWrongItem"/>
+
+    <!-- Button to indicate correct item has been placed - Redirect to Scan Item Ship -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="Correct Number"
+        android:id="@+id/button_placeboxvideo_correctnumber_scanitemship"
+        android:layout_above="@id/button_placeboxvideo_wrongitem_callforhelp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:onClick="placeBoxVideoCorrectNumber"/>
+
+    <!--Button to Call for Help - Redirect to Call for Help -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="Help"
+        android:id="@+id/button_placeboxvideo_callforhelp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="8dp"
+        android:onClick="placeBoxVideoToCallForHelp"/>
+
+</RelativeLayout>

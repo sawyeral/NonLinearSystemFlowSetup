@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.nonlinearsystemflowsetup.NavToItemVideo">
+
+    <!-- Video view for Video Prompt -->
+    <VideoView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/navtoship_video" />
+
+    <!-- Text to indicate this is Nav to Ship Video Prompt - for creation and testing use only -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
+        android:text="Navigate To Shipping Area - Video Prompt" />
+
+    <!-- Button to indicate user did not arrive - Replay prompt, or Redirect to Call for Help -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="No Arrival"
+        android:id="@+id/button_navtoshipvideo_noarrival_callforhelp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="48dp"
+        android:onClick="navToShipVideoNoArrival"
+        />
+
+    <!-- Button to Call for Help - Redirect to Call for Help -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="Help"
+        android:id="@+id/button_navtoshipvideo_callforhelp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="48dp"
+        android:onClick="navToShipVideoToCallForHelp"
+        />
+
+    <!-- Button to indicate user has arrived - Redirect to Place Box -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="Arrival"
+        android:id="@+id/button_navtoshipvideo_placebox"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="48dp"
+        android:onClick="navToShipVideoToPlaceBox"
+        />
+
+</RelativeLayout>

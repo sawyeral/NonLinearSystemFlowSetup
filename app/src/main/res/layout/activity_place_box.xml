@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Image view for photo prompt -->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/placebox_photo_sample"
+        android:layout_marginBottom="115dp"
+        />
+
+    <!-- Text to indicate that this is Place Box Photo Prompt - for creation and testing use only -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Place Box - Photo Prompt"/>
+
+    <!-- Button to indicate no action - Replay prompt, or Redirect to Video Prompt -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="No Action/\nToo Few"
+        android:textSize="12dp"
+        android:id="@+id/button_placeboxphoto_noaction_placeboxvideo"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="8dp"
+        android:onClick="placeBoxNoAction"/>
+
+    <!-- Button to indicated user has placed too many items - Replay prompt, or Redirect to Video Prompt -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="Too Many"
+        android:id="@+id/button_placeboxphoto_toomany_placeboxvideo"
+        android:layout_above="@id/button_placeboxphoto_noaction_placeboxvideo"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="8dp"
+        android:onClick="placeBoxTooMany"/>
+
+    <!-- Button to indicate user has placed wrong item - Replay prompt, or Redirect to Video Prompt -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="Wrong Item"
+        android:id="@+id/button_placeboxphoto_wrongitem_placeboxvideo"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="8dp"
+        android:onClick="placeBoxWrongItem"/>
+
+    <!-- Button to indicate user has placed item correctly - Redirect to Scan Item Ship -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="Correct Number"
+        android:id="@+id/button_placeboxphoto_correctnumber_scantoship"
+        android:layout_above="@id/button_placeboxphoto_wrongitem_placeboxvideo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        />
+
+    <!-- Button to Call for Help - Redirect to Call for Help -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="Help"
+        android:id="@+id/button_placeboxphoto_callforhelp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="8dp"
+        />
+
+</RelativeLayout>
